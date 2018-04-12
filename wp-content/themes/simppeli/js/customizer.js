@@ -16,18 +16,8 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
-	wp.customize( 'custom_logo', function( value ) {
-        value.bind( function( to ) {
-        	if( to !== '' ){
-                $('.logo').addClass('bookrev-hidden-preview');
-            } else {
-                $('.logo').removeClass('bookrev-hidden-preview');
-			}
-		} );
-	} );
-
-    // Header text color.
-    wp.customize( 'header_textcolor', function( value ) {
+	// Header text color.
+	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
 				$( '.site-title, .site-description' ).css( {
@@ -35,7 +25,7 @@
 					'position': 'absolute'
 				} );
 			} else {
-				$( '.site-title, .site-description' ).css( {
+				$( '.site-title, .site-title a, .site-description' ).css( {
 					'clip': 'auto',
 					'color': to,
 					'position': 'relative'
@@ -43,11 +33,4 @@
 			}
 		} );
 	} );
-
-
-	
-	
-	
-	
-	
 } )( jQuery );
