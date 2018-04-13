@@ -1,0 +1,294 @@
+# Translation of Themes - McKinley in Chinese (China)
+# This file is distributed under the same license as the Themes - McKinley package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-10-27 03:03:58+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Themes - McKinley\n"
+
+#. Description of the plugin/theme
+msgid "McKinley is a sleek blog theme based on the awesome TwentyThirteen theme from WordPress."
+msgstr "McKinley是一个时尚的博客主题，基于WordPress的Twenty Thirteen主题。"
+
+#. Theme Name of the plugin/theme
+msgid "McKinley"
+msgstr "McKinley"
+
+#: taxonomy-post_format.php:23
+msgid "%s Archives"
+msgstr "%s归档"
+
+#: tag.php:21
+msgid "Tag Archives: %s"
+msgstr "标签归档：%s"
+
+#: search.php:18
+msgid "Search Results for: %s"
+msgstr "针对以下内容的搜索结果：%s"
+
+#: inc/custom-header.php:58
+msgctxt "header image description"
+msgid "Star"
+msgstr "星"
+
+#: inc/custom-header.php:53
+msgctxt "header image description"
+msgid "Diamond"
+msgstr "钻"
+
+#: inc/custom-header.php:48
+msgctxt "header image description"
+msgid "Circle"
+msgstr "圆"
+
+#: inc/back-compat.php:38 inc/back-compat.php:50 inc/back-compat.php:65
+msgid "McKinleyrequires at least WordPress version 3.6. You are running version %s. Please upgrade and try again."
+msgstr "McKinley至少要求WordPress 3.6版。 您正在运行%s版本。 请升级，然后重试。"
+
+#: image.php:52
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "下一篇 <span class=\"meta-nav\">&rarr;</span>"
+
+#: image.php:51
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> 早期文章"
+
+#: image.php:39
+msgid "Full resolution"
+msgstr "全尺寸"
+
+#: image.php:38
+msgid "Link to full-size image"
+msgstr "到全尺寸图像的链接"
+
+#: image.php:22
+msgid "<span class=\"attachment-meta\">Published on <time class=\"entry-date\" datetime=\"%1$s\">%2$s</time> in <a href=\"%3$s\" title=\"Return to %4$s\" rel=\"gallery\">%5$s</a></span>"
+msgstr "<span class=\"attachment-meta\">发表于<time class=\"entry-date\" datetime=\"%1$s\">%2$s</time>，属于<a href=\"%3$s\" title=\"回到%4$s\" rel=\"gallery\">%5$s</a></span>"
+
+#: header.php:44
+msgid "Skip to content"
+msgstr "跳至内容"
+
+#: functions.php:371
+msgid "Permalink to %s"
+msgstr "链向 %s 的固定链接"
+
+#: functions.php:365
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr "%1$s于%2$s"
+
+#: functions.php:345
+msgid "View all posts by %s"
+msgstr "查看%s的所有文章"
+
+#. Translators: used between list items, there is a space after the comma.
+#: functions.php:330 functions.php:336
+msgid ", "
+msgstr "、"
+
+#: functions.php:324
+msgid "Sticky"
+msgstr "置顶"
+
+#: functions.php:304
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:303
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: functions.php:300
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: functions.php:272
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "较新文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:268
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 早期文章"
+
+#: functions.php:264
+msgid "Posts navigation"
+msgstr "文章导航"
+
+#: functions.php:239
+msgid "Appears in the footer section of the site."
+msgstr "在网站页脚区域出现。"
+
+#: functions.php:237
+msgid "Main Widget Area"
+msgstr "主挂件区"
+
+#: functions.php:222
+msgid "Page %s"
+msgstr "第 %s 页"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Source Sans Pro, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:136
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr "off"
+
+#: functions.php:104
+msgid "Navigation Menu"
+msgstr "导航菜单"
+
+#: footer.php:20
+msgid "Proudly powered by %s"
+msgstr "由 %s 强力驱动"
+
+#: footer.php:20
+msgid "Semantic Personal Publishing Platform"
+msgstr "语义个人出版平台"
+
+#: footer.php:20
+msgid "http://wordpress.org/"
+msgstr "http://cn.wordpress.org/"
+
+#. #-#-#-#-#  mckinley.pot (McKinley 1.1.0)  #-#-#-#-#
+#. Author of the plugin/theme
+#: footer.php:19
+msgid "ThemeTrust"
+msgstr "ThemeTrust"
+
+#. #-#-#-#-#  mckinley.pot (McKinley 1.1.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+#: footer.php:19
+msgid "http://themetrust.com/"
+msgstr "http://themetrust.com/"
+
+#: footer.php:19
+msgid "Theme by"
+msgstr "主题撰写者"
+
+#: content-none.php:27
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: content-none.php:22
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr "抱歉，没有符合您搜索条件的结果。请换其它关键词再试。"
+
+#: content-none.php:18
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"
+
+#: content-none.php:12
+msgid "Nothing Found"
+msgstr "没有找到任何内容"
+
+#: content-gallery.php:39 content-image.php:21 content-quote.php:22
+#: content-video.php:29 content.php:32
+msgid "View all % comments"
+msgstr "查看所有%评论"
+
+#: content-gallery.php:39 content-image.php:21 content-quote.php:22
+#: content-video.php:29 content.php:32
+msgid "One Comment"
+msgstr "1 评论"
+
+#: content-gallery.php:39 content-image.php:21 content-quote.php:22
+#: content-video.php:29 content.php:32
+msgid "Leave a comment"
+msgstr "发表回复"
+
+#: content-aside.php:20 content-aside.php:28 content-audio.php:37
+#: content-chat.php:29 content-gallery.php:42 content-image.php:24
+#: content-link.php:19 content-quote.php:25 content-status.php:19
+#: content-video.php:32 content.php:36 image.php:44 page.php:39
+msgid "Edit"
+msgstr "编辑"
+
+#: content-aside.php:14 content-audio.php:31 content-chat.php:24
+#: content-gallery.php:53 content-image.php:14 content-link.php:14
+#: content-quote.php:14 content-status.php:14 content-video.php:42
+#: content.php:47 image.php:70 page.php:35
+msgid "Pages:"
+msgstr "页面："
+
+#: content-aside.php:13 content-audio.php:30 content-gallery.php:52
+#: content-gallery.php:55 content-image.php:13 content-link.php:13
+#: content-quote.php:13 content-status.php:13 content.php:46
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "继续阅读 <span class=\"meta-nav\">&rarr;</span>"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr "较新评论 →"
+
+#: comments.php:46
+msgid "&larr; Older Comments"
+msgstr "← 早期评论"
+
+#: comments.php:45
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: comments.php:25
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] "%1$s个评论"
+
+#: author.php:30
+msgid "All posts by %s"
+msgstr "所有由%s发布的文章"
+
+#: author-bio.php:20
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "查看所有由 %s 发表的文章 <span class=\"meta-nav\">&rarr;</span>"
+
+#: author-bio.php:16
+msgid "About %s"
+msgstr "关于%s"
+
+#: archive.php:35
+msgid "Archives"
+msgstr "归档"
+
+#: archive.php:33
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y年"
+
+#: archive.php:31
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "Y年n月"
+
+#: archive.php:29 archive.php:31 archive.php:33 category.php:19
+msgid "%s"
+msgstr "%s"
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这儿似乎什么都没有，试试搜索？"
+
+#: 404.php:21
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "有点尴尬诶。"
+
+#: 404.php:16
+msgid "Not found"
+msgstr "未找到"
+
+#. Theme URI of the plugin/theme
+msgid "http://themetrust.com/themes"
+msgstr "http://themetrust.com/themes"
