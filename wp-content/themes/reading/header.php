@@ -21,7 +21,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<title><?php wp_title( ' - ', true, 'right' ); ?></title>
+    <!-- If home page, remove the description, only the blog title -->
+    <title><?php if(is_front_page()) echo get_bloginfo( 'name' ); else wp_title(' - ',true,'right'); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>

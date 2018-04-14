@@ -113,7 +113,8 @@ p {
     font-weight: normal;
     font-style: normal;
     font-family: "Official Script Simple";
-    font-size: 28px;
+    font-size: 30px;
+    text-align: center;
 }
 
 
@@ -128,7 +129,7 @@ p {
 
 .entry-title {
     font-family: "Official Script Simple";
-    font-size: 34px;
+    font-size: 36px;
 }
 
 .entry-meta a, .entry-meta a:hover{
