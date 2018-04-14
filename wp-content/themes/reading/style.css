@@ -1,12 +1,152 @@
 /*
  Theme Name:   Reading
- Description:  Reading is Twenty Seventeen child theme. Reading can help you stay focused on reading and we devote to most comfortable experience for your reading.
+ Description:  Reading is Twenty Thirteen child theme. Reading can help you stay focused on reading and we devote to most comfortable experience for your reading.
  Author:       Joseph Chan
  Author URI:   https://github.com/jeopsh/
- Template:     twentyseventeen
+ Template:     twentythirteen
  Version:      1.0.1
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         white, light, black, reading, two-columns, twentyseventeen
- Text Domain:  reading-twenty-seventeen-child
+ Tags:         white, light, black, reading, two-columns, twentythirteen
+ Text Domain:  reading-twenty-thirteen-child
 */
+
+
+/* Common*/
+
+@font-face {
+    font-family: "Official Script";
+    src: url("./fonts/official-script.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Official Script Simple";
+    src: url("./fonts/official-script-simple.ttf");
+    font-weight: normal;
+}
+
+body {
+    color: #222;
+}
+
+a {
+    color: #222;
+}
+
+p {
+    margin: 0 0 15px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+/* Header */
+
+.site-header .home-link {
+    text-align: center;
+    min-height: 150px;
+}
+
+.site-header .site-title:hover {
+    text-decoration: unset;
+}
+
+.site-title {
+    font-size: 52px;
+    font-family: "Official Script";
+    padding: 35px 0 3px;
+    font-weight: normal;
+}
+
+.site-description {
+    font: 16px "Source Sans Pro", Helvetica, sans-serif
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #eee;
+    color: #000;
+    height: 46px;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu li a {
+    color: #000;
+    font-size: 17px;
+    padding: 15px 16px 10px 16px;
+}
+
+.nav-menu .current_page_item > a, .nav-menu .current_page_ancestor > a, .nav-menu .current-menu-item > a, .nav-menu .current-menu-ancestor > a {
+    color: unset;
+    font-style: unset;
+    padding: 15px 16px 10px 16px;
+    border-bottom: 4px black solid;
+    font-size: 17px;
+    /*margin: 0 5px;*/
+}
+
+.nav-menu li:hover > a, .nav-menu li a:hover, .nav-menu li:focus > a, .nav-menu li a:focus {
+    background-color: unset;
+    color: unset;
+    padding: 15px 16px 10px 16px;
+    border-bottom: 4px black solid;
+    font-size: 17px;
+}
+
+/* Widget */
+
+.widget {
+    background-color: unset;
+    font-size: 18px;
+}
+
+.widget a, .widget a:hover {
+    color: #000;
+}
+
+.widget .widget-title {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "Official Script Simple";
+    font-size: 28px;
+}
+
+
+/* Content */
+
+.hentry {
+    padding: 40px 0 0 0;
+}
+
+
+/* Entry */
+
+.entry-title {
+    font-family: "Official Script Simple";
+    font-size: 34px;
+}
+
+.entry-meta a, .entry-meta a:hover{
+    color: #000;
+}
+
+.entry-title a:hover {
+    color: unset;
+    text-decoration: unset;
+}
+
+
+/* Footer */
+
+.footer-custom {
+    text-align: center;
+    padding: 50px 0 20px;
+    color: #999;
+    font-size: 13px;
+}
+

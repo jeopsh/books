@@ -1,0 +1,23 @@
+/*
+ Theme Name:   Reading-Seventeen
+ Description:  Reading is Twenty Seventeen child theme. Reading can help you stay focused on reading and we devote to most comfortable experience for your reading.
+ Author:       Joseph Chan
+ Author URI:   https://github.com/jeopsh/
+ Template:     twentyseventeen
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         white, light, black, reading, two-columns, twentyseventeen
+ Text Domain:  reading-twenty-seventeen-child
+*/
+
+/* Header */
+.site-header {
+    /*background-color: #ffffff;*/
+}
+
+/* Navigation */
+.navigation-top {
+    /*background-color: #eee;*/
+    /*line-height: 0;*/
+}
