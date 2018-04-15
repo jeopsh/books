@@ -16,17 +16,29 @@ function my_theme_enqueue_styles() {
 	);
 }
 
+/* Page Navigation */
+function numeric_paging_nav() {
+	global $wp_query;
 
-//function new_excerpt_more($more) {
-//	global $post;
-//	return '… [<a href="'. get_permalink($post->ID) . '">阅读全文</a>]';
-//}
-//add_filter('twentythirteen_excerpt_more', 'new_excerpt_more');
+	// Don't print empty markup if there's only one page.
+	if ( $wp_query->max_num_pages < 2 )
+		return;
+	?>
+	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'twentythirteen' ); ?></h1>
+		<div class="nav-links">
 
-//
-//function excerpt_read_more_link($output) {
-//    global $post;
-//    $output = mb_substr($output,0, 200);
-//    return $output . '<span><a href="'. get_permalink($post->ID).'">阅读全文...</a></span>';
-//}
-//add_action('the_excerpt', 'excerpt_read_more_link');
+			<?php wp_pagenavi(); ?>
+
+			<!--			--><?php //if ( get_next_posts_link() ) : ?>
+			<!--			<div class="nav-previous">--><?php //next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentythirteen' ) ); ?><!--</div>-->
+			<!--			--><?php //endif; ?>
+			<!---->
+			<!--			--><?php //if ( get_previous_posts_link() ) : ?>
+			<!--			<div class="nav-next">--><?php //previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?><!--</div>-->
+			<!--			--><?php //endif; ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}

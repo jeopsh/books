@@ -148,6 +148,10 @@ ul.nav-menu {
 
 /* Content */
 
+#content {
+    min-height: 800px;
+}
+
 .hentry {
     padding: 0;
 }
@@ -163,6 +167,32 @@ ul.nav-menu {
 
 .sidebar .post-navigation .nav-links {
     padding: 20px 376px 0 60px;
+}
+
+.post-navigation {
+    font-size: 18px;
+}
+
+.paging-navigation {
+    background-color: unset;
+    text-align: center;
+    font-size: 20px;
+}
+
+.paging-navigation .wp-pagenavi a, .paging-navigation .wp-pagenavi .current {
+    font-style: normal;
+    margin: 0 3px;
+    padding: 5px 12px;
+    font-size: 22px;
+}
+
+.paging-navigation .wp-pagenavi a:hover {
+    text-decoration: none;
+    background-color: #ddd;
+}
+
+.paging-navigation .wp-pagenavi .current {
+    background-color: #ddd;
 }
 
 
