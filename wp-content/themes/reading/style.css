@@ -34,6 +34,14 @@ a {
     color: #222;
 }
 
+a:hover {
+    color: unset;
+}
+
+a:visited {
+    color: #222;
+}
+
 p {
     margin: 0 0 15px;
     line-height: 1.8;
@@ -52,11 +60,17 @@ p {
     text-decoration: unset;
 }
 
+.home-link a:hover {
+    text-decoration: unset;
+}
+
 .site-title {
     font-size: 52px;
     font-family: "Official Script";
     padding: 35px 0 3px;
     font-weight: normal;
+    width: 280px;
+    margin: 0 auto;
 }
 
 .site-title img {
@@ -81,6 +95,7 @@ ul.nav-menu {
     background-color: #eee;
     color: #000;
     height: 46px;
+    margin-bottom: 40px;
 }
 
 .nav-menu li {
@@ -108,6 +123,7 @@ ul.nav-menu {
     padding: 15px 16px 10px 16px;
     border-bottom: 4px black solid;
     font-size: 17px;
+    text-decoration: unset;
 }
 
 /* Widget */
@@ -133,25 +149,93 @@ ul.nav-menu {
 /* Content */
 
 .hentry {
-    padding: 40px 0 0 0;
+    padding: 0;
+}
+
+.navigation a {
+    color: #222
+}
+
+.navigation a:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+.sidebar .post-navigation .nav-links {
+    padding: 20px 376px 0 60px;
 }
 
 
 /* Entry */
 
+.entry-header {
+     margin-bottom: unset;
+}
+
 .entry-title {
     font-family: "Official Script Simple";
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
+    box-sizing: border-box;
+}
+
+.entry-title a:hover {
+    border-bottom: 1px black solid;
 }
 
 .entry-meta a, .entry-meta a:hover{
     color: #000;
 }
 
-.entry-title a:hover {
+.entry-summary p {
+    cursor: text;
+    color: #777;
+    /*margin: -25px 0 -15px 0;*/
+}
+
+.entry-summary a {
     color: unset;
     text-decoration: unset;
+    pointer-events: none;
+}
+
+.entry-summary a:hover {
+    color: unset;
+}
+
+.entry-content a, .comment-content a {
+    color: unset;
+    text-decoration: underline;
+}
+.entry-content a:hover, .comment-content a:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+/* The Home, Category Page's entry-title */
+
+.home .entry-title, .category .entry-title {
+    font-size: 26px;
+}
+
+.home .entry-title a, .category .entry-title a {
+    color: #444;
+}
+
+.home .entry-title a:hover, .category .entry-title a:hover {
+    color: black;
+    text-decoration: unset;
+}
+
+/* The Single, About Page's Paragraph */
+.single .entry-content p, .about p {
+    margin: 15px 0 0;
+    font-size: 18px;
+}
+
+/* Hide the meta (date, category, comment) */
+.entry-meta {
+    display: none;
 }
 
 
@@ -159,13 +243,76 @@ ul.nav-menu {
 
 .footer-custom {
     text-align: center;
-    padding: 50px 0 20px;
+    margin: 50px 0 20px;
     color: #999;
     font-size: 13px;
 }
 
 
-/* About Page */
+/* The Home Page */
+
+.home .category-title {
+    text-align: center;
+    background-color: #eee;
+    width: 220px;
+    margin: 50px auto 20px;
+    line-height: 1.5;
+}
+
+.home .category-title a {
+    color: unset;
+    font-family: "Official Script Simple";
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.home .category-title a:hover {
+    text-decoration: none;
+    border-bottom: 2px black solid;
+    padding: 0 46px 6px;
+}
+
+/* Reset the Entry Padding */
+.home .entry-header, .home .entry-summary {
+    padding: 0;
+}
+
+/* Clear Home Content Float */
+.home:after {
+    visibility: hidden;
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+}
+
+.home .left {
+    max-width: 1310px;
+    padding: 0 680px 0 80px;
+    margin: 0 auto;
+}
+
+.home .right {
+    max-width: 1310px;
+    padding: 0 80px 0 680px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 0;
+}
+
+@media (max-width: 1330px) {
+    .home .left, .home .right {
+        padding: 0 20px;
+        max-width: 604px;
+        position: unset;
+        height: unset;
+    }
+}
+
+/* The About Page */
 @media (min-width: 999px){
     .about {
         max-width: 1040px;
@@ -174,7 +321,7 @@ ul.nav-menu {
 }
 
 
-/* 404 Page */
+/* The 404 Page */
 .not-found {
     text-align: center;
 }

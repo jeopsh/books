@@ -19,10 +19,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
-
+            <a>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
+            </a>
 			<?php endwhile; ?>
 
             <?php //twentythirteen_paging_nav(); ?>
