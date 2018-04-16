@@ -29,7 +29,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/js/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function(){
             $(".user-icon").hover(function() {
@@ -87,21 +87,6 @@
                                     <p><a href="<?php echo home_url() . '/wp-login.php' ?>">登录</a></p>
                                     <p><a href="<?php echo home_url() . '/wp-login.php?action=register' ?>">注册</a></p>
 	                            <?php endif; ?>
-                                <?php
-/*                                    if ( is_user_logged_in() ) :
-                                        if ( in_array('administrator', $current_user->roles)) :
-                                            echo "写文章";
-                                        endif;
-                                        echo '退出';
-                                    else :
-                                        echo '登录';
-                                        echo '注册';
-                                    endif;
-                                */?>
-<!--                                <p>写文章</p>-->
-<!--                                <p>注册</p>-->
-<!--                                <p>登录</p>-->
-<!--                                <p>退出</p>-->
                             </div>
                         </div>
                     </div>

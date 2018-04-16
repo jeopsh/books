@@ -88,24 +88,24 @@ function custom_loginlogo_desc($url) {
 add_filter( 'login_headertitle', 'custom_loginlogo_desc' );
 
 
-/**
- * Custom The Back End User List Page
- */
-add_filter('manage_users_columns', 'add_user_nickname_column');
-function add_user_nickname_column($columns) {
-	$columns['user_nickname'] = '昵称';
-	unset($columns['name']);
-	return $columns;
-}
-
-add_action('manage_users_custom_column',  'show_user_nickname_column_content', 20, 3);
-function show_user_nickname_column_content($value, $column_name, $user_id) {
-	$user = get_userdata( $user_id );
-	$user_nickname = $user->nickname;
-	if ( 'user_nickname' == $column_name )
-		return $user_nickname;
-	return $value;
-}
+///**
+// * Custom The Back End User List Page
+// */
+//add_filter('manage_users_columns', 'add_user_nickname_column');
+//function add_user_nickname_column($columns) {
+//	$columns['user_nickname'] = '昵称';
+//	unset($columns['name']);
+//	return $columns;
+//}
+//
+//add_action('manage_users_custom_column',  'show_user_nickname_column_content', 20, 3);
+//function show_user_nickname_column_content($value, $column_name, $user_id) {
+//	$user = get_userdata( $user_id );
+//	$user_nickname = $user->nickname;
+//	if ( 'user_nickname' == $column_name )
+//		return $user_nickname;
+//	return $value;
+//}
 
 
 /**
@@ -141,7 +141,34 @@ function wpjam_edit_user_profile_update($user_id){
 
 
 /**
+ * Custom The Register Page
+ */
+add_action( 'register_form', 'ts_show_extra_register_fields' );
+function ts_show_extra_register_fields(){
+	?>
+    <p>
+        <label for="password">Password<br/>
+            <input id="password" class="input" type="password" tabindex="30" size="25" value="" name="password" />
+        </label>
+    </p>
+    <p>
+        <label for="repeat_password">Repeat password<br/>
+            <input id="repeat_password" class="input" type="password" tabindex="40" size="25" value="" name="repeat_password" />
+        </label>
+    </p>
+    <p>
+<!--        <label for="are_you_human" style="font-size:11px">Sorry, but we must check if you are human. What is the name of website you are registering for?<br/>-->
+<!--            <input id="are_you_human" class="input" type="text" tabindex="40" size="25" value="" name="are_you_human" />-->
+<!--        </label>-->
+    </p>
+	<?php
+}
+
+
+/**
  * Temp Change Site's Domain
  */
 //update_option('siteurl','http://localhost/books');
 //update_option('home','http://localhost/books');
+
+
