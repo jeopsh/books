@@ -40,13 +40,13 @@ get_header(); ?>
     <div class="left">
         <!-- Recommend -->
         <div>
-            <h3 class="category-title"><a href="http://localhost/books/category/recommend/">图书推荐</a></h3>
+            <h3 class="category-title"><a href="<?php echo home_url().'/category/recommend/' ?>">图书推荐</a></h3>
             <?php home_page_post_display('recommend', $num_post) ?>
         </div>
 
         <!-- Daily -->
         <div>
-            <h3 class="category-title"><a href="http://localhost/books/category/daily/">每日一文</a></h3>
+            <h3 class="category-title"><a href="<?php echo home_url().'/category/daily/' ?>">每日一文</a></h3>
     		<?php home_page_post_display('daily', $num_post) ?>
         </div>
     </div>
@@ -54,13 +54,13 @@ get_header(); ?>
     <div class="right">
         <!-- Poem -->
         <div>
-            <h3 class="category-title" style="margin-top: 0"><a href="http://localhost/books/category/poem/">漫谈读书</a></h3>
+            <h3 class="category-title" style="margin-top: 0"><a href="<?php echo home_url().'/category/discuss/' ?>">漫谈读书</a></h3>
             <?php home_page_post_display('discuss', $num_post) ?>
         </div>
 
         <!-- Discuss -->
         <div>
-            <h3 class="category-title"><a href="http://localhost/books/category/discuss/">诗词经典</a></h3>
+            <h3 class="category-title"><a href="<?php echo home_url().'/category/poem/' ?>">诗词经典</a></h3>
             <?php home_page_post_display('poem', $num_post) ?>
         </div>
     </div>

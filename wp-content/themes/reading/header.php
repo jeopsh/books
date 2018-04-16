@@ -68,7 +68,7 @@
                         <div class="user-icon"></div>
                         <div class="user-menu">
                             <div class="user-info">
-                                <a href="http://localhost/books/wp-admin/profile.php">
+                                <a href="<?php echo home_url() . '/wp-admin/profile.php' ?>">
                                     <div class="user-img">
                                         <?php global $current_user; wp_get_current_user(); echo get_avatar( $current_user->ID, 64 ); ?>
                                     </div>
@@ -80,12 +80,12 @@
                             <div class="user-action">
 	                            <?php if ( is_user_logged_in() ) : ?>
 		                            <?php if ( in_array('administrator', $current_user->roles)) : ?>
-                                        <p><a href="http://localhost/books/wp-admin/post-new.php"><?php echo '写文章'; ?></a></p>
+                                        <p><a href="<?php echo home_url() . '/wp-admin/post-new.php' ?>">写文章</a></p>
 		                            <?php endif; ?>
-                                    <p><a href="<?php echo wp_logout_url('http://localhost/books/'); ?>"><?php echo '退出'; ?></a></p>
+                                    <p><a href="<?php echo wp_logout_url(home_url()); ?>">退出</a></p>
 	                            <?php else : ?>
-                                    <p><a href="http://localhost/books/wp-login.php"><?php echo '登录'; ?></a></p>
-                                    <p><a href="http://localhost/books/wp-login.php?action=register"><?php echo '注册'; ?></a></p>
+                                    <p><a href="<?php echo home_url() . '/wp-login.php' ?>">登录</a></p>
+                                    <p><a href="<?php echo home_url() . '/wp-login.php?action=register' ?>">注册</a></p>
 	                            <?php endif; ?>
                                 <?php
 /*                                    if ( is_user_logged_in() ) :
