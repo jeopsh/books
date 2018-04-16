@@ -52,13 +52,13 @@ function load_my_scripts(){
 /**
  * Redirect Login To Home Page
  */
-//function my_login_redirect($redirect_to, $request){
-//	if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
-//		return home_url("/wp-admin/edit.php");
-//	else
-//		return $redirect_to = 'http://localhost/books';
-//}
-//add_filter("login_redirect", "my_login_redirect", 10, 3);
+function my_login_redirect($redirect_to, $request){
+	if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
+		return home_url("/wp-admin/edit.php");
+	else
+		return $redirect_to = home_url();
+}
+add_filter("login_redirect", "my_login_redirect", 10, 3);
 
 
 /**
@@ -69,7 +69,7 @@ function load_my_scripts(){
 function custom_login_logo() {
 	echo '<style type="text/css">
         .login h1 a {
-            background-image:url("http://localhost/books/wp-content/themes/reading/images/Logo-Login.png") !important;
+            background-image:url("' . get_stylesheet_directory_uri() . '/images/Logo-Login.png") !important;
         }
     </style>';
 }
@@ -86,12 +86,6 @@ function custom_loginlogo_desc($url) {
 	return '新语图书'; //修改文本信息
 }
 add_filter( 'login_headertitle', 'custom_loginlogo_desc' );
-
-// Lode The style.css
-function custom_login() {
-	echo '<link rel="stylesheet" type="text/css" href="http://localhost/books/wp-content/themes/reading/css/login.css" />';
-}
-add_action('login_head', 'custom_login');
 
 
 /**
@@ -144,3 +138,10 @@ function wpjam_edit_user_profile_update($user_id){
 	$_POST['first_name']	= '';
 	$_POST['last_name']		= '';
 }
+
+
+/**
+ * Temp Change Site's Domain
+ */
+//update_option('siteurl','http://localhost/books');
+//update_option('home','http://localhost/books');
