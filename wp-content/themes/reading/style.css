@@ -16,13 +16,13 @@
 
 @font-face {
     font-family: "Official Script";
-    src: url("./fonts/official-script.ttf");
+    src: url("fonts/official-script.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Official Script Simple";
-    src: url("./fonts/official-script-simple.ttf");
+    src: url("fonts/official-script-simple.ttf");
     font-weight: normal;
 }
 
@@ -56,6 +56,11 @@ p {
     min-height: 150px;
 }
 
+.site-header .search-field {
+    background-image: url(images/search-icon.png);
+    height: 40px
+}
+
 .site-header .site-title:hover {
     text-decoration: unset;
 }
@@ -81,6 +86,7 @@ p {
     font: 16px "Source Sans Pro", Helvetica, sans-serif
 }
 
+
 /* Navbar */
 
 .main-navigation {
@@ -96,6 +102,7 @@ ul.nav-menu {
     color: #000;
     height: 46px;
     margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .nav-menu li {
@@ -126,6 +133,89 @@ ul.nav-menu {
     text-decoration: unset;
 }
 
+.site-header .search-form {
+    right: 35px;
+}
+
+.search-field:hover {
+    background-image: url(images/search-icon-hover.png);
+}
+
+.user p {
+    margin: 0;
+    line-height: unset;
+    font-size: 17px;
+}
+
+.user-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    background-image: url(images/user-icon.png);
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 3px 0;
+    padding: 0 0 0 34px;
+    width: 1px;
+}
+
+.user-icon:hover {
+    background-image: url(images/user-icon-hover.png);
+}
+
+.user a:hover .user-name {
+    text-decoration: underline;
+}
+
+.user-menu {
+    display: none;
+    padding: 20px 40px 15px 40px;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 46px;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.19), 0 3px 10px rgba(0,0,0,0.23);
+}
+
+.user-menu:before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 60px;
+    top: -15px;
+    right: 0;
+    /*background-color: rgba(255, 0, 0, 0.2);*/
+}
+
+.user-info:after {
+    display:block;
+    clear:both;
+    height:0;
+    content: ".";
+    visibility: hidden;
+    overflow:hidden;
+}
+
+.user-img, .user-name {
+    float: left;
+    margin: 0 3px 10px;
+}
+
+.user-name {
+    margin-top: 12px;
+}
+
+.user-action p {
+    margin: 5px 0 0;
+}
+
+
 /* Widget */
 
 .widget {
@@ -145,6 +235,16 @@ ul.nav-menu {
     text-align: center;
 }
 
+#recentcomments {
+    visibility: hidden;
+    position: relative;
+}
+
+#recentcomments a {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+}
 
 /* Content */
 

@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Test</title>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
     <style>
-        main {
-            position: absolute;
-            top: 0;
-            color: rgba(244, 67, 54, 0.2);
+        .user-info {
+            display: none;
         }
     </style>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("p").hover(function(){
+                $("p").css("background-color","yellow");
+            },function(){
+                $("p").css("background-color","pink");
+            });
+        });
+    </script>
 </head>
 <body>
-    <box>
-        <header>header</header>
-        <main>
-            <h1>fdsfsdfsdf</h1>
-        </main>
-        <footer>footer</footer>
-    </box>
+
+<p>鼠标移动到该段落。</p>
+<div  class="user-menu">
+
+<h1>移动这里显示 h2 隐藏元素</h1>
+<h2 class="user-info">h2 隐藏元素</h2>
+</div>
 </body>
 </html>
