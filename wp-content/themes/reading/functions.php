@@ -52,13 +52,13 @@ function load_my_scripts(){
 /**
  * Redirect Login To Home Page
  */
-function my_login_redirect($redirect_to, $request){
-	if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
-		return home_url("/wp-admin/edit.php");
-	else
-		return $redirect_to = 'http://localhost/books';
-}
-add_filter("login_redirect", "my_login_redirect", 10, 3);
+//function my_login_redirect($redirect_to, $request){
+//	if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
+//		return home_url("/wp-admin/edit.php");
+//	else
+//		return $redirect_to = 'http://localhost/books';
+//}
+//add_filter("login_redirect", "my_login_redirect", 10, 3);
 
 
 /**
