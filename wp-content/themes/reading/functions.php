@@ -69,7 +69,7 @@ add_filter("login_redirect", "my_login_redirect", 10, 3);
 function custom_login_logo() {
 	echo '<style type="text/css">
         .login h1 a {
-            background-image:url("' . get_stylesheet_directory_uri() . '/images/Logo-Login.png") !important;
+            background-image:url("' . get_stylesheet_directory_uri() . '/images/logo-login.png") !important;
         }
     </style>';
 }

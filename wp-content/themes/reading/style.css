@@ -410,7 +410,7 @@ button:active, input[type="submit"]:active, input[type="button"]:active, input[t
 /* The Single, About Page's Paragraph */
 .single .entry-content p, .about p {
     margin: 15px 0 0;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 /* Hide the meta (date, category, comment) */
@@ -506,6 +506,90 @@ button:active, input[type="submit"]:active, input[type="button"]:active, input[t
         max-width: 1040px;
         padding: 0 218px !important;
     }
+}
+
+.donate {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.donate .donate-button {
+    font-size: 26px;
+    font-family: "Official Script";
+    margin-top: 50px;
+    padding: 12px 30px;
+    background-color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*.donate .button:focus {*/
+    /*background-color: #eee;*/
+/*}*/
+
+.donate .donate-button:hover {
+    background-color: #ddd;
+}
+
+.donate .donate-button p {
+    padding: 5px;
+    background-color: #eee;
+}
+
+.donate .donate-info {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+}
+
+.donate .donate-info a {
+    cursor: pointer;
+}
+
+.donate .donate-info .donate-content {
+    position: relative;
+    width: 570px;
+    padding: 60px 65px 45px 65px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.19), 0 3px 10px rgba(0,0,0,0.23);
+}
+
+.donate .donate-info .donate-content:after {
+    display:block;
+    clear:both;
+    height:0;
+    content: ".";
+    visibility: hidden;
+    overflow:hidden;
+}
+
+.donate .donate-close {
+    position: absolute;
+    right: 11px;
+    top: 8px;
+    background-color: transparent;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-image: url(images/close-icon.png);
+}
+
+.donate .donate-close:hover {
+    background-image: url(images/close-icon-hover.png);
+}
+
+.donate .donate-alipay {
+    float:left;
+}
+
+.donate .donate-wechat {
+    float:right;
 }
 
 

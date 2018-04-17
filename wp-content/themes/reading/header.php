@@ -52,7 +52,7 @@
 			<div class="home-link">
                     <h1 class="site-title">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/Logo.png"><?php bloginfo( 'name' ); ?>
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png"><?php bloginfo( 'name' ); ?>
                         </a>
                     </h1>
             <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
