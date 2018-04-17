@@ -26,9 +26,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-
-    <link rel="preload" href="<?php echo get_stylesheet_directory_uri() ?>/fonts/official-script.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="<?php echo get_stylesheet_directory_uri() ?>/fonts/official-script-simple.ttf" as="font" type="font/ttf">
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri() ?>/images/search-icon-hover.png" as="image">
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri() ?>/images/user-icon-hover.png" as="image">
     <link rel="preload" href="<?php echo get_stylesheet_directory_uri() ?>/images/close-icon-hover.png" as="image">
@@ -37,6 +34,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
+
     <script src="<?php echo get_stylesheet_directory_uri() ?>/js/jquery-3.3.1.min.js"></script>
     <script>
         $(document).ready(function(){
