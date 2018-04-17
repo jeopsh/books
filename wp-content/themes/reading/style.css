@@ -641,3 +641,7 @@ button:active, input[type="submit"]:active, input[type="button"]:active, input[t
     font-style: normal;
     padding: 10px 0 40px;
 }
+
+.page-content .search-form {
+    display: none;
+}
