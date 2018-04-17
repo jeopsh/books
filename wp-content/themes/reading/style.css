@@ -42,6 +42,10 @@ a:visited {
     color: #222;
 }
 
+a:focus {
+    outline: none;
+}
+
 p {
     margin: 0 0 15px;
     line-height: 1.8;
