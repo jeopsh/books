@@ -55,6 +55,10 @@ p {
 
 /* Header */
 
+.site-header {
+    margin-top: -30px;
+}
+
 .site-header .home-link {
     text-align: center;
     min-height: 150px;
@@ -76,7 +80,7 @@ p {
 .site-title {
     font-size: 52px;
     font-family: "Official Script";
-    padding: 35px 0 3px;
+    padding: 35px 0 0;
     font-weight: normal;
     width: 280px;
     margin: 0 auto;
