@@ -32,7 +32,7 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<?php if ( !is_search() && !is_single() ) : // Only display Excerpts for Search ?>
+	<?php if ( is_search() || !is_single() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->

@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying Category pages
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying Search Results pages
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen
@@ -15,15 +13,17 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-        
-            <!-- Delete the category info -->
+
+			<header class="page-header">
+				<h1 class="page-title"><?php echo get_search_query() . ' 的搜索结果' ?></h1>
+			</header>
 
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-            <?php numeric_paging_nav(); ?>
+			<?php numeric_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>

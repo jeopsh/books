@@ -88,6 +88,36 @@ function custom_loginlogo_desc($url) {
 add_filter( 'login_headertitle', 'custom_loginlogo_desc' );
 
 
+/* function to add classes to active menu entries */
+function add_active_class_to_custom_posts($classes = array(), $menu_item = false){
+	global $wp_query;
+	$post_name = $menu_item->post_name;
+	$post_type = get_post_type();
+
+	/* Highlight the current menu item if the category-parent of the current posts' category equals to the menu name.
+	 * This is usually the case when you set a category as custom menu item and use wp_nav_menu() to display that */
+	$query_var = get_query_var('cat');
+	if ($query_var) {
+		$current_category = get_category($query_var);
+		$root_categoryObj = get_category($current_category->parent, false);
+		$root_categoryName = strtolower(($root_categoryObj->name));
+		if (strcasecmp($post_name, $root_categoryName) == 0) $classes[] = 'current-menu-item';
+	}
+
+	/* assign 'current-menu-item' to regular posts; that's the default behaviour we just copy here */
+	if(in_array('current-menu-item', $menu_item->classes)){
+		$classes[] = 'current-menu-item';
+	}
+	else {
+		/* assign the 'current-menu-item' class to all custom posts */
+		if ($post_name == $post_type) {
+			$classes[] = 'current-menu-item';
+		}
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'add_active_class_to_custom_posts', 10, 2 );
+
 ///**
 // * Custom The Back End User List Page
 // */
@@ -111,58 +141,33 @@ add_filter( 'login_headertitle', 'custom_loginlogo_desc' );
 /**
  * Custom The Back End User Info Edit Page
  */
-add_action('show_user_profile','wpjam_edit_user_profile');
-add_action('edit_user_profile','wpjam_edit_user_profile');
-function wpjam_edit_user_profile($user){
-	?>
-    <script>
-        jQuery(document).ready(function($) {
-            $('#first_name').parent().parent().hide();
-            $('#last_name').parent().parent().hide();
-            $('#display_name').parent().parent().hide();
-            $('.show-admin-bar').hide();
-        });
-    </script>
-	<?php
-}
-
-// Focused On User Nickname
-add_action('personal_options_update','wpjam_edit_user_profile_update');
-add_action('edit_user_profile_update','wpjam_edit_user_profile_update');
-function wpjam_edit_user_profile_update($user_id){
-	if (!current_user_can('edit_user', $user_id))
-		return false;
-	$user = get_userdata($user_id);
-	$_POST['nickname'] = ($_POST['nickname'])?:$user->user_login;
-	$_POST['display_name']	= $_POST['nickname'];
-	$_POST['first_name']	= '';
-	$_POST['last_name']		= '';
-}
-
-
-/**
- * Custom The Register Page
- */
-add_action( 'register_form', 'ts_show_extra_register_fields' );
-function ts_show_extra_register_fields(){
-	?>
-    <p>
-        <label for="password">Password<br/>
-            <input id="password" class="input" type="password" tabindex="30" size="25" value="" name="password" />
-        </label>
-    </p>
-    <p>
-        <label for="repeat_password">Repeat password<br/>
-            <input id="repeat_password" class="input" type="password" tabindex="40" size="25" value="" name="repeat_password" />
-        </label>
-    </p>
-    <p>
-<!--        <label for="are_you_human" style="font-size:11px">Sorry, but we must check if you are human. What is the name of website you are registering for?<br/>-->
-<!--            <input id="are_you_human" class="input" type="text" tabindex="40" size="25" value="" name="are_you_human" />-->
-<!--        </label>-->
-    </p>
-	<?php
-}
+//add_action('show_user_profile','wpjam_edit_user_profile');
+//add_action('edit_user_profile','wpjam_edit_user_profile');
+//function wpjam_edit_user_profile($user){
+//	?>
+<!--    <script>-->
+<!--        jQuery(document).ready(function($) {-->
+<!--            $('#first_name').parent().parent().hide();-->
+<!--            $('#last_name').parent().parent().hide();-->
+<!--            $('#display_name').parent().parent().hide();-->
+<!--            $('.show-admin-bar').hide();-->
+<!--        });-->
+<!--    </script>-->
+<!--	--><?php
+//}
+//
+//// Focused On User Nickname
+//add_action('personal_options_update','wpjam_edit_user_profile_update');
+//add_action('edit_user_profile_update','wpjam_edit_user_profile_update');
+//function wpjam_edit_user_profile_update($user_id){
+//	if (!current_user_can('edit_user', $user_id))
+//		return false;
+//	$user = get_userdata($user_id);
+//	$_POST['nickname'] = ($_POST['nickname'])?:$user->user_login;
+//	$_POST['display_name']	= $_POST['nickname'];
+//	$_POST['first_name']	= '';
+//	$_POST['last_name']		= '';
+//}
 
 
 /**

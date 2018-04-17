@@ -73,7 +73,7 @@
                                         <?php global $current_user; wp_get_current_user(); echo get_avatar( $current_user->ID, 64 ); ?>
                                     </div>
                                     <div class="user-name">
-                                            <?php echo $current_user->display_name.'<br>'; echo $current_user->user_login; ?>
+                                            <?php echo $current_user->display_name.'<br>';?>
                                     </div>
                                 </a>
                             </div>

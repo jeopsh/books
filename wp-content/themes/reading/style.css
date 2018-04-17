@@ -208,7 +208,7 @@ ul.nav-menu {
 }
 
 .user-name {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .user-action p {
@@ -235,16 +235,16 @@ ul.nav-menu {
     text-align: center;
 }
 
-#recentcomments {
-    visibility: hidden;
-    position: relative;
-}
+/*#recentcomments {*/
+    /*visibility: hidden;*/
+    /*position: relative;*/
+/*}*/
 
-#recentcomments a {
-    visibility: visible;
-    position: absolute;
-    left: 0;
-}
+/*#recentcomments a {*/
+    /*visibility: visible;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+/*}*/
 
 /* Content */
 
@@ -293,6 +293,52 @@ ul.nav-menu {
 
 .paging-navigation .wp-pagenavi .current {
     background-color: #ddd;
+}
+
+/* Comment */
+.comment-respond {
+    background-color: unset;
+}
+
+p.comment-form-url {
+    display: none;
+}
+
+.comment-metadata .edit-link {
+    display: none;
+}
+
+.comment-metadata a {
+    pointer-events: none;
+}
+
+.comment-metadata a:hover {
+    color: #222;
+    text-decoration: unset;
+}
+
+.comment-author .fn, .comment-author .url, .comment-reply-link, .comment-reply-login {
+    color: #222;
+}
+
+.logged-in-as {
+    display: none;
+}
+
+button, input[type="submit"], input[type="button"], input[type="reset"] {
+    background: #eee;
+    border: none;
+    color: #222;
+}
+
+button:hover, button:focus, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:focus, input[type="button"]:focus, input[type="reset"]:focus {
+    background: #ddd;
+}
+
+button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active {
+    border: none;
+    background: #ddd;
+    padding: 11px 24px 10px;
 }
 
 
@@ -471,3 +517,27 @@ ul.nav-menu {
     margin: -30px 0 300px 0;
 }
 
+/* The Search Page */
+
+.search .entry-title a {
+    font-size: 26px;
+    color: #444;
+}
+
+.search .entry-title a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.search .page-header {
+    background-color: unset;
+    max-width: 1040px;
+    padding: 0 376px 0 60px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.search .page-header h1 {
+    font-style: normal;
+    padding: 10px 0 40px;
+}
