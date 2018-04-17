@@ -88,35 +88,53 @@ function custom_loginlogo_desc($url) {
 add_filter( 'login_headertitle', 'custom_loginlogo_desc' );
 
 
-/* function to add classes to active menu entries */
-function add_active_class_to_custom_posts($classes = array(), $menu_item = false){
-	global $wp_query;
-	$post_name = $menu_item->post_name;
-	$post_type = get_post_type();
+///* function to add classes to active menu entries */
+//function add_active_class_to_custom_posts($classes = array(), $menu_item = false){
+//	global $wp_query;
+//	$post_name = $menu_item->post_name;
+//	$post_type = get_post_type();
+//
+//	/* Highlight the current menu item if the category-parent of the current posts' category equals to the menu name.
+//	 * This is usually the case when you set a category as custom menu item and use wp_nav_menu() to display that */
+//	$query_var = get_query_var('cat');
+//	if ($query_var) {
+//		$current_category = get_category($query_var);
+//		$root_categoryObj = get_category($current_category->parent, false);
+//		$root_categoryName = strtolower(($root_categoryObj->name));
+//		if (strcasecmp($post_name, $root_categoryName) == 0) $classes[] = 'current-menu-item';
+//	}
+//
+//	/* assign 'current-menu-item' to regular posts; that's the default behaviour we just copy here */
+//	if(in_array('current-menu-item', $menu_item->classes)){
+//		$classes[] = 'current-menu-item';
+//	}
+//	else {
+//		/* assign the 'current-menu-item' class to all custom posts */
+//		if ($post_name == $post_type) {
+//			$classes[] = 'current-menu-item';
+//		}
+//	}
+//	return $classes;
+//}
+//add_filter( 'nav_menu_css_class', 'add_active_class_to_custom_posts', 10, 2 );
 
-	/* Highlight the current menu item if the category-parent of the current posts' category equals to the menu name.
-	 * This is usually the case when you set a category as custom menu item and use wp_nav_menu() to display that */
-	$query_var = get_query_var('cat');
-	if ($query_var) {
-		$current_category = get_category($query_var);
-		$root_categoryObj = get_category($current_category->parent, false);
-		$root_categoryName = strtolower(($root_categoryObj->name));
-		if (strcasecmp($post_name, $root_categoryName) == 0) $classes[] = 'current-menu-item';
-	}
 
-	/* assign 'current-menu-item' to regular posts; that's the default behaviour we just copy here */
-	if(in_array('current-menu-item', $menu_item->classes)){
+/**
+ * Current Category Nav For Single Page
+ */
+function single_nav_category($classes, $item) {
+	if (
+		is_single()
+		&& 'category' === $item->object
+		&& in_array( $item->object_id, wp_get_post_categories( $GLOBALS['post']->ID ) )
+	) {
 		$classes[] = 'current-menu-item';
 	}
-	else {
-		/* assign the 'current-menu-item' class to all custom posts */
-		if ($post_name == $post_type) {
-			$classes[] = 'current-menu-item';
-		}
-	}
+
 	return $classes;
 }
-add_filter( 'nav_menu_css_class', 'add_active_class_to_custom_posts', 10, 2 );
+add_filter('nav_menu_css_class', 'single_nav_category', 10, 2);
+
 
 ///**
 // * Custom The Back End User List Page
@@ -175,5 +193,6 @@ add_filter( 'nav_menu_css_class', 'add_active_class_to_custom_posts', 10, 2 );
  */
 //update_option('siteurl','http://localhost/books');
 //update_option('home','http://localhost/books');
+
 
 
