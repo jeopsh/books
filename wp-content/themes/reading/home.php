@@ -54,7 +54,7 @@ get_header(); ?>
     <div class="right">
         <!-- Poem -->
         <div>
-            <h3 class="category-title" style="margin-top: 0"><a href="<?php echo home_url().'/category/discuss/' ?>">漫谈读书</a></h3>
+            <h3 class="category-title" id="right-top"><a href="<?php echo home_url().'/category/discuss/' ?>">漫谈读书</a></h3>
             <?php home_page_post_display('discuss', $num_post) ?>
         </div>
 

@@ -479,12 +479,20 @@ button:active, input[type="submit"]:active, input[type="button"]:active, input[t
     height: 0;
 }
 
+.home #right-top {
+    margin-top: 0;
+}
+
 @media (max-width: 1330px) {
     .home .left, .home .right {
         padding: 0 20px;
         max-width: 604px;
         position: unset;
         height: unset;
+    }
+
+    .home #right-top {
+        margin-top: 50px;
     }
 }
 
